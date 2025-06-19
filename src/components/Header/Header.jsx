@@ -12,6 +12,7 @@ const Header = (props) => {
             <Button onClick={onClose}>Закрыть</Button>
             <span className={'username'}>
                 {user?.username}
+                <p>Привет!</p>
             </span>
         </div>
 
