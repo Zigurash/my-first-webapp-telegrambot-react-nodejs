@@ -9,18 +9,16 @@ const tg = window.Telegram.WebApp;
 
 function App() {
 
-    const {onToggleButton} = useTelegram();
+    const {onToggleButton, tg} = useTelegram();
 
   useEffect(() => {
     tg.ready();
-  },[]);
+  },[])
 
 
-  const onClose = () => { 
-    tg.close();
-  }
   return (
-    <div className="App">
+    <div className="App"> 
+    <header></header>
       <button onClick={onToggleButton}>toggle</button>
     </div>
   );
