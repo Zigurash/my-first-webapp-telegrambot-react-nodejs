@@ -1,9 +1,15 @@
 // import logo from './logo.svg';
 import { useEffect } from 'react';
 import './App.css';
+import { useTelegram } from './hooks/useTelegram';
+
+
 const tg = window.Telegram.WebApp;
 
+
 function App() {
+
+    const {onToggleButton} = useTelegram();
 
   useEffect(() => {
     tg.ready();
@@ -15,9 +21,7 @@ function App() {
   }
   return (
     <div className="App">
-      <p>hyi pizda</p>
-      <button> Click me!</button>
-      <button onClick={onClose}>Close.</button>
+      <button onClick={onToggleButton}>toggle</button>
     </div>
   );
 }
