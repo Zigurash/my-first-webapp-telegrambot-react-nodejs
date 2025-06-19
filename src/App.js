@@ -2,10 +2,10 @@
 import { useEffect } from 'react';
 import './App.css';
 import { useTelegram } from './hooks/useTelegram';
-import Header from './components/Header/Header.jsx';
 import {Route, Routes} from 'react-router-dom'
 import ProductList from './components/ProductList/ProductList';
 import Form from './components/Form/Form';
+import Header from './components/Header/Header'
 
 const tg = window.Telegram.WebApp;
 
