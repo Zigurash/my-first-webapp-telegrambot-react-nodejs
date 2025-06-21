@@ -12,6 +12,7 @@ import Header from './components/Header/Header';
 
 function App() {
 
+
     const {onToggleButton, tg} = useTelegram();
 
   useEffect(() => {
@@ -23,8 +24,8 @@ function App() {
     <div className="App"> 
     <Header />
     <Routes>
-      <Route index elemen={<ProductList />}/>
-      <Route path={form}   elemen={<Form />}/>
+      <Route index element={<ProductList />}/>
+      <Route path={'form'}   element={<Form />}/>
     </Routes>
 
     </div>
