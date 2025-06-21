@@ -10,6 +10,10 @@ const webAppUrl = 'https://jolly-biscotti-4d04f2.netlify.app'
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
+const app = express();
+
+app.use(express.json());
+app.use(cors());
 
 
 bot.on('message', async (msg) => {
@@ -48,3 +52,6 @@ bot.on('message', async (msg) => {
   }}
 });
 
+const PORT = 8000;
+
+app.listen(PORT, () => console.log ('Server started on PORT ' + PORT))
