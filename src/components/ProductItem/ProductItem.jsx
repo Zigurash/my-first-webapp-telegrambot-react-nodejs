@@ -2,7 +2,7 @@ import react from "react";
 import Button from "../Button/Button";
 
 const ProductItem = ({product, className}) => {
-    const onHandler = () => {
+    const onAddHandler = () => {
         onAdd(product);
     }
     return (
