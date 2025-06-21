@@ -19,7 +19,7 @@ const Form = () => {
     },[])
 
         useEffect( () => {
-        if (!street || !country) { 
+        if (!city || !country) { 
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
@@ -38,7 +38,7 @@ const Form = () => {
         setStreet(e.target.value)
     }
 
-    const onChangeSubjetc = (e) => {
+    const onChangeSubject = (e) => {
         setSubject(e.target.value)
     }
  
@@ -67,7 +67,7 @@ const Form = () => {
             onChange={onChangeStreet}
         />
         
-        <select value={subject} onChange={onChangeSubjetc} className={'select'}>
+        <select value={subject} onChange={onChangeSubject} className={'select'}>
             <option value={'physical'}>Физ. лицо</option>
              <option value={'legal'}>Юр. лицо</option>
         </select>
