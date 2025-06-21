@@ -19,12 +19,12 @@ const Form = () => {
     },[])
 
         useEffect( () => {
-        if (!city || !country) { 
+        if (!city || !country || !street) { 
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
         }
-    },[country, city])
+    },[country, city, street])
 
     const onChangeCountry = (e) => {
         setCountry(e.target.value)
