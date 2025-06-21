@@ -1,10 +1,13 @@
 .list {
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
     justify-content: center;
 }
 
 .item {
+    flex: 0 1 45%;
+    box-sizing: border-box;
     margin-right: 10px;
     margin-bottom: 10px;
 }
