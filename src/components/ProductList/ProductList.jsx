@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 const products = [
     {id: '1', title: 'Джинсы', price: 4890, description: 'Лён, синие рваный стиль'},
     {id: '2', title: 'Ботинки', price: 14890, description: 'Хард, тяги бархатные'},
-    {id: '3', title: 'Куртка', price: 4390, description: 'Джинсовая, синяя рваный стиль'},
+    {id: '3', title: 'Куртка', price: 4390, description: 'Джинса, синяя рваная'},
     {id: '4', title: 'Тапки', price: 5290, description: 'Домашние, обычные'},
     {id: '5', title: 'Трусы', price: 1190, description: 'Лён, кайфовые'},
     {id: '6', title: 'Носки', price: 890, description: 'Лён, стиль'},
