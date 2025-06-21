@@ -13,10 +13,10 @@ bot.on('message', async (msg) => {
   const text = msg.text;
 
   if (text === '/start') {
-    await bot.sendMessage(chatId, "Переходи в наш интернет магаз!", {
+    await bot.sendMessage(chatId, "Готов к заказу?", {
         reply_markup: {
             keyboard: [
-                [{text: 'Перейти в шоп!', web_app: {url: webAppUrl}}],
+                [{text: 'Заполнить форму', web_app: {url: webAppUrl + '/form'}}],
             ]
         }
     })
