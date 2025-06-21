@@ -13,6 +13,7 @@ const products = [
     {id: '5', title: 'Трусы', price: 1190, description: 'Лён, кайфовые'},
     {id: '6', title: 'Носки', price: 890, description: 'Лён, стиль'},
     {id: '7', title: 'Хзвообщечтоэто', price: 15990, description: 'Лён, полурак'},
+    {id: '8', title: 'Хзвообщечтоэто', price: 15990, description: 'Лён, полурак'},
 ]
 
 
