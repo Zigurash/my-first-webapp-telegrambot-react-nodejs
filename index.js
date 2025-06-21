@@ -34,7 +34,7 @@ bot.on('message', async (msg) => {
     try {
         const data = JSON.parse(msg?.web_app_data?.data)
 
-        await bot.sendMessage(chatId, `Спасибо за обратную связь!\nВаша страна: ${data?.country}\nВаш город: ${data?.sity}\nВаша улица: ${data.street}`)
+        await bot.sendMessage(chatId, `Спасибо за обратную связь!\nВаша страна: ${data?.country}\nВаш город: ${data?.city}\nВаша улица: ${data.street}`)
 
         setTimeout( async () => {
             await bot.sendMessage(chatId,'Еще разок спасибо, ништяк збс');
