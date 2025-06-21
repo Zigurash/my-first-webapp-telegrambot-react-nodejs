@@ -52,6 +52,28 @@ bot.on('message', async (msg) => {
   }}
 });
 
+app.post('/web-data', async (req, res) => {
+    const {queryId, products, totalPrice} = req.body;
+    try {
+        await bot.answerWebAppQuery(queryId, {
+            type: 'article',
+            id: queryId,
+            title: 'Успешная покупка!',
+            input_message_content: {message_text: 'Поздравляю с покупкой, вы приобрели товраров на сумму' + totalPrice + '\nСписок товаров:\n' + products}
+        });    
+        return res.status(200).json({});
+    } catch (e) {
+          await bot.answerWebAppQuery(queryId, {
+            type: 'article',
+            id: queryId,
+            title: 'Не удалось преобрести товар!',
+            input_message_content: {message_text: 'Не удалось преобрести товар!'}
+
+    });
+    return res.status(500).json({});
+    }
+});
+
 const PORT = 8000;
 
 app.listen(PORT, () => console.log ('Server started on PORT ' + PORT))
